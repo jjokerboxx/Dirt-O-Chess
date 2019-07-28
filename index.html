@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>LOLTOCHESS</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- 부트스트랩? -->
-
+    
 </head>
-<body>
+<body onload="when_load()">
 
 <h1>Welcome to Dirt'o'chess!</h1>
 <p>Thanks to my muse 'FriendshipIng' that she gave me an inspiration of this project</p>
@@ -22,18 +22,29 @@
 <!-- Garen HP -->
 <p>
   <div, id="asdasd"></div>
+  
 </p>
 
 <!-- show EXP -->
 <p>
   <span>EXP : </span>
-  <span, id="Exp_Num"></span>
+  <span, id="Exp_Num">0</span>
+</p>
+
+<!-- show Gold -->
+<p>
+  <span>Gold : </span>
+  <span id="gold"></span>
 </p>
 
 
-<!-- show the cham list -->
+<!-- 새로운 챔프 리스트 --> 
 <p>
-  <div, id="doc0">1</div>
+  <button class="buy_cham", onclick="button_pressed(event)">챔피언</button>
+  <button class="buy_cham", onclick="button_pressed(event)">챔피언</button>
+  <button class="buy_cham", onclick="button_pressed(event)">챔피언</button>
+  <button class="buy_cham", onclick="button_pressed(event)">챔피언</button>
+  <button class="buy_cham", onclick="button_pressed(event)">챔피언</button>
 </p>
 
 
