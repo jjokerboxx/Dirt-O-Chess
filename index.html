@@ -3,26 +3,32 @@
 <head>
     <meta charset="utf-8">
     <title>LOLTOCHESS</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-3.3.2-dist/css/bootstrap.css">
     <!-- 부트스트랩? -->
+    
     
 </head>
 <body onload="when_load()">
 
-<h1>Welcome to Dirt'o'chess!</h1>
+<span>
+  <h1 id="start">Welcome to Dirt'o'chess!</h1>
+  <h1 id="welcome"></h1>
+</span>
+
+
 <p>Thanks to my muse 'FriendshipIng' that she gave me an inspiration of this project</p>
 
 
 <!-- 2 button to reroll and EXp up -->
 <div>
   <button onclick="reroll()">REROLL</button>
-  <button onclick="Exp_Up()">EXP</button>
+  <button onclick="Exp_Up()">EXP UP</button>
 </div>
 
 <!-- Garen HP -->
 <p>
-  <div, id="asdasd"></div>
-  
+  <div id="asdasd"></div>
 </p>
 
 <!-- show EXP -->
@@ -37,8 +43,31 @@
   <span id="gold"></span>
 </p>
 
+<img id="asdasdd" src="asdasd.jpg" alt="asdasd.jpg" hidden>
+<!-- 캔버스와 필드 생성 -->
+<canvas id="field" height="500", width="1000">
+  
+  
+</canvas>
 
-<!-- 새로운 챔프 리스트 --> 
+
+
+<!-- 벤치 리스트 -->
+<p>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+
+</p>
+
+<!-- 새로운 챔프 구매 리스트 --> 
 <p>
   <button class="buy_cham", onclick="button_pressed(event)">챔피언</button>
   <button class="buy_cham", onclick="button_pressed(event)">챔피언</button>
@@ -49,7 +78,8 @@
 
 
 <script src="script.js"></script>  
-
+<!-- <script type="text/javascript" src="bootstrap-3.3.2-dist/js/bootstrap.js"></script> -->
+<!-- 부트스트랩의 자바스크립트는 무적권 제이쿼리가 있어야 작동함, 제이쿼리 사용법 익히기 -->
 
 
 </body>
