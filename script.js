@@ -163,6 +163,7 @@ function button_pressed(event)
 
 // 구매할 때 동시에 발생하기에 구매 함수에 넣어버림
 // 챔피언 3개 모일 시 업그레이드 액션
+// param으로 클래스 이름을 넣어볼까? 어디든 쓰일 수 있는 함수로 - 즉 순수함수?
 function Upgrade(){
 	var counts = {};
 	var TextArray = [];
@@ -206,13 +207,14 @@ function Upgrade(){
 			{
 				if (bench_chair[x].innerText == ddd[0])
 				{
-					// 지금 크래시가 발생함 어떤 부분을 수정해야하는가 고민해보자
+					
 					bench_chair[x].innerText = "";
 					
 				}
 			}
 		}			
 		, 500);
+		// 적절한 밀리세컨드 설정으로 자연스럽게
 		
 		console.log("oh yeag!");
 	}
@@ -238,40 +240,26 @@ function when_load()
 	// show_Garen();
 }
 
-// 구매시 벤치에 해당 챔피언 정보 추가
-//function add_bench(event)
-// {
-// 	var bnh = event.currentTarget;
-	
-// 	//var benchList = document.getElementsByClassName("buy_cham");
-// 	var bench_chair = document.getElementsByClassName("bench_list");
-	
-// 	for(var i in bench_chair)
-// 	{
-// 		if(i.innerText = "")
-// 		i.innerText = bnh.innerText;
-// 		break;
-// 	}
-// 	// 이건 포문으로 하면 안됨, 큐를 생각해보자.
-// }
 
+// 드래그 드롭 코드
+// https://m.mkexdev.net/58 => 이 페이지 설명으로 이해 완료! 드래그 시 객체에 값을 저장 후 드롭할 때 값을 불러서 해당 태그에 넣어줌
+// 이때 해당 엘리먼트의 attr까지 들어가면 안되므로 preventDeafault를 해주는 것 (예시 : 버튼 태그에 아이디나 클래스가 달라질 수 있음)
+const allowDrop = (event) => {
+	event.preventDefault();
+}
+const drag = (event) => {
+	event.dataTransfer.setData("text", event.target.id);
+}
 
-// function Purchase(cham)
-// {
-// 	bench.push(cham);
-// 	gold -= cham.price;
-// 	if (gold < 0)
-// 	{
-// 		undo the fuction;
-// 	}
-// }
+const drop = (event) => {
+    event.preventDefault();
+    let data = event.dataTransfer.getData("text");
+	event.target.appendChild(document.getElementById(data));
 
-// function Sell(cham)
-// {
-// 	bench.splice(bench.indexOf(cham), 1);
-// 	gold += cham.price;
-		
-// }
+	// 클래스이름을 다르게 해서 업그레이ㄷ,?
+	Upgrade();
+}
+
 
 
 // 화면에 그림 생성

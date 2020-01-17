@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap-3.3.2-dist/css/bootstrap.css">
     <!-- 부트스트랩? -->
+
     
     
 </head>
@@ -43,27 +44,42 @@
   <span id="gold"></span>
 </p>
 
-<img id="asdasdd" src="asdasd.jpg" alt="asdasd.jpg" hidden>
-<!-- 캔버스와 필드 생성 -->
-<canvas id="field" height="500", width="1000">
+<div class="battlefield" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <p>
+    여기에 드래그 드롭을 해주시오
+  </p>
+  
+  <!-- <button id="ddd"></button>
+  <button id="aaa"></button>
+  <button id="ccc"></button>
+  <button id="eee"></button> -->
+</div>  
+
+<!-- 왜 캔버스에 버튼들이 표시되지 않는 건가??? -->
+<!-- <div ondrop="drop(event)" ondragover="allowDrop(event)"> -->
+<div>
+  <img id="asdasdd" src="asdasd.jpg" alt="asdasd.jpg" hidden>
+  <!-- 캔버스와 필드 생성 -->
+  <canvas id="field" height="500", width="1000" >
   
   
-</canvas>
-
-
+  </canvas>
+</div>
 
 <!-- 벤치 리스트 -->
+<!-- 역으로 드래그 되지 않기 위해 -->
+<!-- <p ondrop="drop(event)" ondragover="allowDrop(event)"> -->
 <p>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
-  <button class="bench_list" onclick="call_of_the_duty()">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)" id="01">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)" id="02">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)" id="03">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)" id="04">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)">  </button>
+  <button class="bench_list" onclick="call_of_the_duty()" draggable="true" ondragstart="drag(event)">  </button>
 
 </p>
 
